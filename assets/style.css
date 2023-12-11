@@ -119,7 +119,8 @@ h2 {
 }
 
 .about-container p {
-  padding: 50px;
+  padding: 30px;
+  font-size: var(--font-body-size);
 }
 
 .portfolio-container {
@@ -130,7 +131,6 @@ h2 {
 
 .portfolio-container h2 {
   display: flex;
-  justify-content: center;
   font-size: var(--font-header-size);
   color: var(--font--second-color);
   -webkit-text-stroke-width: 2px;
@@ -139,6 +139,13 @@ h2 {
 .portfolio-main {
   display: grid;
   grid-template-rows: 1fr 1fr;
+}
+
+/* First Project header */
+.portfolio-left h3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .portfolio-left img {
