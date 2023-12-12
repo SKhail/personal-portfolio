@@ -5,7 +5,7 @@
   --navigation-bg-color: #026258;
   --border-segment: 3px solid #333333;
   --font-family: 'Raleway', sans-serif;
-  --font-header-size: 40px;
+  --font-header-size: 30px;
   --font-body-size: 20px;
 }
 
@@ -37,8 +37,25 @@ body {
   width: 100%;
 }
 
-#navBar h1 {
-  margin-top: 1rem;
+/* Icons for the website */
+.icons {
+  width: 32px;
+  height: max-content;
+}
+
+/* Github icon */
+.githubLink {
+  padding-top: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Logo Name*/
+.logo {
+  font-weight: 700;
+  font-size: var(--font-header-size);
+  color: var(--font--second-color);
+  text-decoration: none;
 }
 .navLinks {
   display: flex;
@@ -79,9 +96,9 @@ body {
 }
 
 #profilePic {
-  width: 100rem;
+  width: 120rem;
   height: 5rem;
-  margin: 0px 5%;
+  margin-right: 200px;
   min-height: 400px;
   border-radius: 10px;
   overflow: hidden;
@@ -100,87 +117,315 @@ body {
 #aboutMe {
   font-size: 20px;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--font--color);
 }
 
 #aboutMe,
 h2 {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   font-size: var(--font-header-size);
-  -webkit-text-stroke-width: 2px;
-}
-
-/* Portfolio section showcasing my work */
-#porfolio-work {
-  background-color: var(--navigation-bg-color);
-  color: var(--navigation-color);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .about-container p {
-  padding: 30px;
   font-size: var(--font-body-size);
+  margin: 20px 0 0px;
+}
+
+/* Buttons in the about me section */
+.about-container .contact-btn {
+  display: flex;
+  padding-top: 20px;
+  padding-right: 60px;
+  justify-content: space-evenly;
+  width: 250px;
+  background: var(--background--color);
+  gap: 20px;
+}
+
+.contact-btn a {
+  color: var(--font--main-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90px;
+  height: 40px;
+  border: var(--border-segment);
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+/* Load up effect on the buttons */
+.contact-btn a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #026258;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.contact-btn a:hover::before {
+  width: 100%;
+}
+
+/* Targeting the github profile */
+.contact-btn a:nth-child(2) {
+  background: var(--navigation-bg-color);
+  color: var(--font--second-color);
+}
+
+.contact-btn a:nth-child(2)::before {
+  background: var(--background--color);
+}
+
+.contact-btn a:nth-child(2):hover {
+  color: var(--font--main-color);
+}
+
+/*.............Portfolio section showcasing my work.............. */
+
+#porfolio-work {
+  background-color: var(--navigation-bg-color);
+  color: var(--navigation-color);
+  height: 35rem;
 }
 
 .portfolio-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 100px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.portfolio-container h2 {
+.projects {
+  text-decoration: none;
+  padding: 24px;
   display: flex;
-  font-size: var(--font-header-size);
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background--color);
+  height: 100%;
+  width: 48%;
+  border-radius: 30px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--font--color);
+}
+
+.projects img {
+  height: 100%;
+  width: 70%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: var(--border-segment);
+  transition: filter 0.3s ease;
+}
+
+.projects img:hover {
+  /* expands the first project making it larger than others */
+  transform: scale(1.5);
+}
+
+.portfolio-title h2 {
+  display: flex;
+  align-items: center;
   color: var(--font--second-color);
-  -webkit-text-stroke-width: 2px;
+  padding: 20px;
+  font-size: var(--font-header-size);
 }
 
-.portfolio-main {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+/*............More-Projects.............*/
+
+.project-two {
+  text-decoration: none;
+  padding: 24px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background--color);
+  height: 100%;
+  width: 48%;
+  border-radius: 30px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--font--color);
 }
 
-/* First Project header */
-.portfolio-left h3 {
+.project-two img {
+  height: 100%;
+  width: 68%;
+  border-radius: 10px;
+  border: var(--border-segment);
+  transition: filter 0.3s ease;
+}
+
+.project-two img:hover {
+  filter: grayscale(100%);
+}
+
+.githubLink2 {
+  padding-top: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+/*.............Contact-Page..............*/
+
+.contact {
+  padding-top: 10px;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
-
-.portfolio-left img {
-  width: 60%;
-  height: 50%;
-  border-radius: 5rem;
-}
-
-.portfolio-projects {
+.contact-container {
   display: flex;
-  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 30rem;
+  border: var(--border-segment);
+  padding: 24px;
+  border-radius: 30px;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer p {
+  display: flex;
   justify-content: center;
-  padding: 32px 64px;
+  padding-top: 20px;
 }
 
-.portfolio-projects img {
-  padding: 0 8px;
-  width: 60%;
-  height: 50%;
-  border-radius: 5rem;
-}
+/* Media Queries */
 
-/*Media Query for navigation bar*/
+/* Small devices */
+@media screen and (max-width: 480px) {
+  :root {
+    --font-header-size: 24px;
+    --font-body-size: 14px;
+  }
 
-/*Media Query profile pic and about-me profile */
+  /* profile picture */
+  #profilePic {
+    margin-right: 22px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 7px solid #333333;
+  }
 
-/*Media Query for the Portfolio section*/
+  /* About-us profile*/
+  .about-container p {
+    font-size: var(--font-body-size);
+  }
 
-/* @media all and (max-width: 600px) {
-  body {
+  /* Adjust the navigation */
+  #navBar {
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+
+  /* Adjust the navigation links */
+  .navLinks ul li a {
+    font-size: 20px;
+    margin-left: 0.5rem;
+  }
+
+  /* Adjust the contact buttons */
+  .contact-btn a {
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+  }
+
+  .projects,
+  .project-two {
+    width: 100%;
+  }
+
+  .projects img,
+  .project-two img {
+    width: 90%;
+  }
+
+  #porfolio-work {
+    height: 16rem;
+  }
+
+  /* Adjust the footer */
+  footer p {
+    font-size: 14px;
   }
 }
 
-@media all and (min-width: 1024px), (max-width: 1280px) {
-  body {
-  } */
+/* Medium devices */
+@media only screen and (max-width: 768px) {
+  :root {
+    --font-header-size: 22px;
+    --font-body-size: 14px;
+  }
+  /* Navigation full name */
+  .logo {
+    font-size: var(--font-header-size);
+  }
 
-/* grid-template-areas: 'profilePic' 'aboutMe'; */
+  /* profile picture */
+  #profilePic {
+    margin-right: 22px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 7px solid #333333;
+  }
+
+  /* About-us profile*/
+  .about-container p {
+    font-size: var(--font-body-size);
+  }
+
+  /* Adjust the navigation */
+  #navBar {
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+
+  /* Adjust the navigation links */
+  .navLinks ul li a {
+    font-size: 20px;
+    margin-left: 0.5rem;
+  }
+
+  /* Adjust the contact buttons */
+  .contact-btn a {
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+  }
+
+  .projects,
+  .project-two {
+    margin: 5px;
+  }
+
+  .projects img,
+  .project-two img {
+    width: 90%;
+  }
+
+  #porfolio-work {
+    height: 22rem;
+  }
+}
