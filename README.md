@@ -21,9 +21,7 @@ The task is to create your own portfolio page where you can showcase your curren
 3.  You will have it in your local machines and can start the Application.
 4.  A screenshot location will be provided below to show how the website looks in mobile device
 
-    ```md
-    ![alt text] (assets/images/screenshot-website.png)
-    ```
+     <img src="assets/images/screenshot-website.png" alt="First Personal-Website" />
 
 ### External Resources
 
